@@ -20,7 +20,7 @@ rule plot_accelerometer_data:
         lineplot="reports/figures/EW{PID}_s{SESSION}_d{DAY}_{CONDITION}_lineplot.html",
         # histogram="reports/figures/EW{PID}_s{SESSION}_d{DAY}_{CONDITION}_histogram.html"
     script:
-        "../src/data/plot_accelerometer_data.R"
+        "../src/visualization/plot_accelerometer_data.R"
 
 rule compute_accelerometer_features_r:
     input:
@@ -76,7 +76,7 @@ rule plot_accelerometer_features:
     output:
         "reports/figures/allparticipants_{type}_{feature}_bar.png",
     script:
-        "../src/data/plot_accelerometer_features.R"
+        "../src/visualization/plot_accelerometer_features.R"
 
 rule plot_box_accelerometer_features:
     input:
@@ -86,5 +86,5 @@ rule plot_box_accelerometer_features:
     output:
         "reports/figures/allparticipants_{type}_box.png",
     script:
-        "../src/data/plot_box_accelerometer_features.R"
+        "../src/visualization/plot_box_accelerometer_features.R"
 
