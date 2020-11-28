@@ -1,0 +1,34 @@
+
+PIDS:
+  01PD:
+    SESSIONS: [1, 2, 3]
+    DAYS: [2, 2, 2]
+    CONDITIONS: [b, c, a]
+  03PD:
+    SESSIONS: [1, 2, 3]
+    DAYS: [2, 2, 2]
+    CONDITIONS: [b, c, a]
+  05PD:
+    SESSIONS: [1, 2, 3]
+    DAYS: [1, 1, 1]
+    CONDITIONS: [c, b, a]
+  06PD:
+    SESSIONS: [1, 2, 3]
+    DAYS: [1, 1, 1]
+    CONDITIONS: [c, a, b]
+  07PD:
+    SESSIONS: [1,2,3]
+    DAYS: [1,1,1]
+    CONDITIONS: [b,c,a]
+  08PD:
+    SESSIONS: [1]
+    DAYS: [2]
+    CONDITIONS: [a]
+  09PD:
+    SESSIONS: [1, 2, 3]
+    DAYS: [1, 1, 1]
+    CONDITIONS: [c, b, a]
+  10PD:
+    SESSIONS: [1, 2, 3]
+    DAYS: [1, 1, 1]
+    CONDITIONS: [c, a, b]
