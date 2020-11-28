@@ -1,4 +1,5 @@
 configfile: "config.yaml"
+include: "rules/renv.smk"
 include: "rules/emma_watch.smk"
 
 files = []

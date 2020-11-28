@@ -5,7 +5,8 @@
 - Install Python 3.7 or older
 - Install R 4.0 or newer
 - Install conda or miniconda
--  `git clone https://github.com/JulioV/emma_watch_analysis.git`
+- `git clone https://github.com/JulioV/emma_watch_analysis.git`
+- `cd emma_watch_analysis`
 - `conda env create -f environment.yml -n emma_watch`
 - `conda activate emma_watch`
 - `snakemake -j1 renv_install`
