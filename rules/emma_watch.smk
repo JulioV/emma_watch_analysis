@@ -40,6 +40,7 @@ rule compute_accelerometer_features_python:
         plot_peaks_x="reports/figures/EW{PID}_s{SESSION}_d{DAY}_{CONDITION}_{REPETITION}_peaksx.png",
         plot_peaks_y="reports/figures/EW{PID}_s{SESSION}_d{DAY}_{CONDITION}_{REPETITION}_peaksy.png",
         plot_peaks_z="reports/figures/EW{PID}_s{SESSION}_d{DAY}_{CONDITION}_{REPETITION}_peaksz.png",
+        plot_peaks_m="reports/figures/EW{PID}_s{SESSION}_d{DAY}_{CONDITION}_{REPETITION}_peaksm.png",
     script:
         "../src/features/compute_accelerometer_features.py"
 

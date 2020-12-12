@@ -16,6 +16,7 @@ repetition_time <- repetition_times %>%
 start <- repetition_time[["start"]]
 end <- repetition_time[["end"]]
 
+# duration audit
 if(repetition == 3){
   write_csv(tibble(start = !!start,end = !!end, seconds = nrow(matlab_data$taskstream)/128, samples = nrow(matlab_data$taskstream)), snakemake@output[[2]])
 }else{
@@ -29,11 +30,12 @@ if(!is.na(start) & !is.na(end) & end > start){
     select(t,
           x = V1,
           y = V2,
-          z = V3)
+          z = V3) %>% 
+    mutate(m = sqrt((x**2) + (y**2) + (z**2)))
   if(max(acc_data$t) < end-1) #discard incomplete repetitions (1 second tolerance)
-    acc_data <- tibble(t=numeric(), x=numeric(), y=numeric(), z=numeric())
+    acc_data <- tibble(t=numeric(), x=numeric(), y=numeric(), z=numeric(), m=numeric())
 } else{
-  acc_data <- tibble(t=numeric(), x=numeric(), y=numeric(), z=numeric())
+  acc_data <- tibble(t=numeric(), x=numeric(), y=numeric(), z=numeric(), m=numeric())
 }
 
 write_csv(acc_data, snakemake@output[[1]])
